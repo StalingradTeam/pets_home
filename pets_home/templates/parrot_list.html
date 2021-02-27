@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Птицы{% endblock title %}
+{% block header %}Пернатые{% endblock header %}
+{% block content %}
+<div class="row">
+{% for parrot in parrots %}
+  <div class="col-lg-2">
+    <a href="{% url 'parrot' pk=parrot.pk %}">
+      <img src="{{ parrot.image_url }}" class="rounded-lg border border-info img-fluid" width="600" height="800" alt="">
+    </a>
+    <h4>{{ parrot.name }}</h4>
+  </div>
+{% endfor %}
+</div>
+{% endblock content %}

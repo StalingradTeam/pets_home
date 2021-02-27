@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Кошки{% endblock title %}
+{% block header %}{{cats.name}}{% endblock header %}
+{% block content %}
+<div class="col-sm-3">
+    <div class="w-25 p-3">
+        <img src="{{ cats.image_url}}" alt="img" height="400" width="400" class="rounded-lg border border-success">
+    </div>
+    <div class="w-auto p-3">
+        <p>Прозвище: {{cats.name}}</p>
+        <p>Возраст: {{cats.age}}</p>
+        <p>Порода: {{cats.breed}}</p>
+        <p>Примечание: {{cats.description}}</p>
+    </div>
+</div>
+{% endblock content %}

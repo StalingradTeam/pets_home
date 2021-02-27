@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Главная страница{% endblock title %}
+{% block header %}Про нас{% endblock header %}
+{% block content %}
+    <div class="row">
+        <div class="col-lg-6">
+            <img src='{% static "img/worck.jpg" %}' width="640" heigt="480" class="rounded-lg img-fluid" alt="">
+            <h3>Мы</h3>
+        </div>
+        <div class="col-lg-6">   
+            <img src='{% static "img/ourpets.png" %}' width="640" heigt="480" class="rounded-lg img-fluid" alt="">
+            <h3>Подопечные</h3>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+    <footer>
+    <div class="row">
+        <div class="col-12" style="background-color: white;">
+            <h2 class="text-center">Контакты</h2>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-3">
+            <h4 class="text-primary text-center">Telegram chanel</h4>
+            <p class="text-center">@petscommune</p>
+        </div>
+        <div class="col-sm-3">
+            <h4 class="text-primary text-center">Телефон</h4>
+            <p class="text-center">84997777777</p>
+        </div>
+        <div class="col-sm-3">
+            <h4 class="text-primary text-center">Адрес</h4> 
+            <p class="text-center">РФ,г.Москва<br>ул.Ленина 123, оф.5</p> 
+        </div>
+        <div class="col-sm-3"><br>
+            <p class="text-right" style="margin-top: 2rem;">&copy;&nbsp;created by - LightWorld inc.</p>
+        </div>
+    </div>
+</footer> 
+{% endblock content %}

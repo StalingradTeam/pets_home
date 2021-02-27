@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Кошки{% endblock title %}
+{% block header %}Коты и Кошки{% endblock header %}
+{% block content %}
+<div class="row">
+{% for cat in cats %}
+  <div class="col-md-3">
+    <a href="{% url 'cat' pk=cat.pk %}">
+      <img src="{{ cat.image_url }}" class="rounded-lg border border-info" width="250" height="250" alt="">
+    </a>
+    <h4>{{ cat.name }}</h4>
+  </div>
+{% endfor %}
+</div>
+{% endblock content %}

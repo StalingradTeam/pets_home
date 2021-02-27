@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  {% block bootstrap_header %}
+  <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}' />
+  {% endblock bootstrap_header %}
+  <title>{% block title %}Default title{% endblock title %}</title>
+</head>
+<body style="background-color: silver;">
+  <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" style="background-color: yellow;">
+    <a class="nav-link disabled" href="#"><img src='{% static "img/ico.png" %}' class="d-inline-block align-top" width="95" height="95" alt="icon">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'home' %}">Про нас<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'index' %}">Наши питомцы</a>
+        </li>
+        
+      </ul>
+      <span class="navbar-text">
+        <h1 style="margin-left: 15rem; font-family: 'Oswald', cursive;">◉ Ковчег ◉</h1>
+        <h1 style="margin-left: 5rem; font-family: 'Oswald', cursive;">- временное пристанище животных -</h1>
+      </span>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-center" style="background-color: red; font-family: 'Oswald', cursive;">{% block header %}{% endblock header %}</h2>
+      </div>
+    </div>
+{% block content %}
+{% endblock content %}
+  </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+</body>
+</html>
